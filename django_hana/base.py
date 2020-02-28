@@ -228,6 +228,24 @@ class DatabaseWrapper(BaseDatabaseWrapper):
         self.introspection = DatabaseIntrospection(self)
         self.validation = BaseDatabaseValidation(self)
 
+    def client_class(self, huh):
+        return self
+
+    def creation_class(self, huh):
+        return self
+
+    def features_class(self, huh):
+        return self
+
+    def introspection_class(self, huh):
+        return self
+
+    def validation_class(self, huh):
+        return self
+
+    def ops_class(self, huh):
+        return self
+
     def close(self):
         self.validate_thread_sharing()
         if self.connection is None:
