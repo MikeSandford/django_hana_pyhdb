@@ -69,7 +69,8 @@ class HanaSpatialRefSys(models.Model, SpatialRefSysMixin):
     storage_format = models.CharField(max_length=8, null=False)
     definition = models.CharField(max_length=5000)
     transform_definition = models.CharField(max_length=5000)
-    objects = models.GeoManager()
+    # this isn't needed anymore as of 2.0 I think
+    # objects = models.GeoManager()
 
     class Meta:
         app_label = 'gis'
